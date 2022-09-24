@@ -5,7 +5,7 @@ import { NotionRenderer, Collection, CollectionRow } from 'react-notion-x'
 import { getAllPosts, getPostBlocks } from '@/lib/notion'
 import BLOG from '@/blog.config'
 import Image from 'next/image'
-import profilepic from '../public/profilepic.svg'
+import profilepic from '../public/profilepic.jpg'
 
 export async function getStaticProps () {
   const postsWithBio = await getAllPosts({ includePages: true })
