@@ -5,6 +5,7 @@ import { createHash } from 'crypto'
 
 const BlogPost = ({ post, blockMap, emailHash }) => {
   if (!post) return null
+  //console.log(post, blockMap, emailHash)
   return (
     <Layout
       blockMap={blockMap}

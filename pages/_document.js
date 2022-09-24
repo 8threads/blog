@@ -14,7 +14,7 @@ class MyDocument extends Document {
         className={BLOG.appearance === 'dark' ? 'dark' : undefined}
       >
         <Head>
-          {BLOG.font && BLOG.font === 'serif'
+          {BLOG.font && BLOG.font === 'IBM Plex Sans'
             ? (
             <>
               <link

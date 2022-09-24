@@ -1,0 +1,6 @@
+@import 'typed';
+
+.text {
+    font-size: 150%;
+    @include typed("Hi, I'm Hafidz 👋");
+}

@@ -1,15 +1,21 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import Container from '@/components/Container'
 import TagItem from '@/components/TagItem'
-import { NotionRenderer, Equation, Code, Collection, CollectionRow } from 'react-notion-x'
+import { NotionRenderer, Equation, Code, Collection, CollectionRow, Modal, Pdf } from 'react-notion-x'
 import BLOG from '@/blog.config'
 import formatDate from '@/lib/formatDate'
 import { useLocale } from '@/lib/locale'
 import { useRouter } from 'next/router'
 import Comments from '@/components/Comments'
+import TweetEmbed from 'react-tweet-embed'
 
 const mapPageUrl = id => {
   return 'https://www.notion.so/' + id.replace(/-/g, '')
+}
+
+const Tweet = ({ id }) => {
+  return <TweetEmbed tweetId={id} />
 }
 
 const Layout = ({
@@ -69,11 +75,17 @@ const Layout = ({
           <div className="-mt-4">
             <NotionRenderer
               recordMap={blockMap}
+              previewImages={true}
               components={{
                 equation: Equation,
                 code: Code,
                 collection: Collection,
-                collectionRow: CollectionRow
+                collectionRow: CollectionRow,
+                nextImage: Image,
+                nextLink: Link,
+                tweet: Tweet,
+                modal: Modal,
+                pdf: Pdf
               }}
               mapPageUrl={mapPageUrl}
             />
