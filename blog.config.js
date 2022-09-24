@@ -1,8 +1,8 @@
 const BLOG = {
   title: '8threads',
-  author: 'Hafidz',
+  author: 'dfgdg',
   email: 'asdf',
-  link: 'https://nobelium.vercel.app',
+  link: 'https://vercel.com',
   description: 'This gonna be an awesome website.',
   lang: 'en-US', // ['en-US', 'zh-CN', 'zh-HK', 'zh-TW', 'ja-JP', 'es-ES']
   appearance: 'light', // ['light', 'dark', 'auto'],
